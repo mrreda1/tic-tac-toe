@@ -10,7 +10,7 @@ public class Game {
         STILL, TIE, WIN
     };
 
-    public static char[] signs = { ' ', 'O', 'X' };
+    public static final char[] signs = { 'O', 'X' };
 
     Game() {
         turn = true;
@@ -48,7 +48,7 @@ public class Game {
     }
 
     public char sign(int s) {
-        return (s < -1 || s > 1 ? ' ' : signs[s + 1]);
+        return (s < 0 || s > 1 ? ' ' : signs[s]);
     }
 
     public State state() {
