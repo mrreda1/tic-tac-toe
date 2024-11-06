@@ -1,4 +1,4 @@
-# Tic Tac Toe Game (Console Edition)
+# Tic Tac Toe Game
 
 ## Overview
 This is a simple **Tic Tac Toe** game developed in **Java**. The game includes both **Player vs Player** and **Player vs Computer** modes. In **Player vs Computer** mode, the computer uses the **minimax algorithm** to play optimally, making it an unbeatable opponent.
