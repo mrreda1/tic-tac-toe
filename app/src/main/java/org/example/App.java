@@ -15,15 +15,18 @@ public class App {
             Game game = new Game();
             Player x = new Player(game, 1), o = new Player(game, 0);
             do {
+                System.out.print("\033[H\033[2J");
                 game.printBoard();
                 System.out.println((game.xTurn() ? 'X' : 'O') + "'s turn.");
                 (game.xTurn() ? x : o).play();
                 Game.State state = game.state();
                 if (state == Game.State.TIE) {
+                    System.out.print("\033[H\033[2J");
                     game.printBoard();
                     System.out.println("Tie!");
                     return;
                 } else if (state == Game.State.WIN) {
+                    System.out.print("\033[H\033[2J");
                     game.printBoard();
                     System.out.println((game.xTurn() ? 'O' : 'X') + " wins!");
                     return;
